@@ -15,8 +15,8 @@ const ToDoList = () => {
     setTodos(response.data);
   };
 
-  const addTodo = async (title) => {
-    const response = await axios.post('http://localhost:8081/api/todos', { title, completed: false });
+  const addTodo = async (title,dueDate) => {
+    const response = await axios.post('http://localhost:8081/api/todos', { title,dueDate, completed: false });
     setTodos([...todos, response.data]);
   };
 
